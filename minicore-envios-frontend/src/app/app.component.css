@@ -1,0 +1,120 @@
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 18px;
+}
+
+.header {
+  margin-bottom: 22px;
+}
+
+.header span {
+  color: #2563eb;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  margin: 8px 0;
+  font-size: 32px;
+}
+
+.header p {
+  color: #52616f;
+  max-width: 720px;
+}
+
+.filter,
+.table-box,
+.mvc {
+  background: white;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.filter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  align-items: end;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #bcccdc;
+  border-radius: 6px;
+}
+
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 11px;
+  color: white;
+  background: #2563eb;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #d9e2ec;
+  padding: 11px;
+  text-align: left;
+}
+
+thead th {
+  background: #1f2933;
+  color: white;
+}
+
+tfoot th {
+  background: #e6f0ff;
+}
+
+.empty {
+  text-align: center;
+}
+
+.message {
+  background: #fff3cd;
+  border: 1px solid #ffe69c;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.mvc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.mvc div {
+  border-left: 4px solid #2563eb;
+  padding-left: 12px;
+}
+
+.mvc h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+@media (max-width: 760px) {
+  .filter,
+  .mvc {
+    grid-template-columns: 1fr;
+  }
+}

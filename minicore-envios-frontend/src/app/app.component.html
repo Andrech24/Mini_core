@@ -1,0 +1,76 @@
+<main class="page">
+  <section class="header">
+    <span>Spring Boot + Angular</span>
+    <h1>Calculo de costo de envios por repartidor</h1>
+    <p>Filtra los envios por fecha y calcula el costo usando el peso en kg y la tarifa de cada zona.</p>
+  </section>
+
+  <section class="filter">
+    <label>
+      Fecha Inicio
+      <input type="date" [(ngModel)]="fechaInicio">
+    </label>
+
+    <label>
+      Fecha Fin
+      <input type="date" [(ngModel)]="fechaFin">
+    </label>
+
+    <button type="button" (click)="calcular()">Calcular</button>
+  </section>
+
+  <p class="message" *ngIf="mensaje">{{ mensaje }}</p>
+
+  <section class="table-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Repartidor</th>
+          <th>Envios</th>
+          <th>Total kg</th>
+          <th>Zona</th>
+          <th>Tarifa/kg</th>
+          <th>Costo total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of resultados">
+          <td>{{ item.repartidor }}</td>
+          <td>{{ item.envios }}</td>
+          <td>{{ item.totalKg }} kg</td>
+          <td>{{ item.zona }}</td>
+          <td>{{ item.tarifaKg | currency:'USD' }}</td>
+          <td><strong>{{ item.costoTotal | currency:'USD' }}</strong></td>
+        </tr>
+
+        <tr *ngIf="resultados.length === 0">
+          <td colspan="6" class="empty">No existen envios en el rango seleccionado.</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Total general</th>
+          <th>{{ totalEnvios() }}</th>
+          <th>{{ totalKg() }} kg</th>
+          <th colspan="2"></th>
+          <th>{{ totalCosto() | currency:'USD' }}</th>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <section class="mvc">
+    <div>
+      <h2>Modelo</h2>
+      <p>Repartidor, Envio, Zona y ResultadoEnvio.</p>
+    </div>
+    <div>
+      <h2>Vista</h2>
+      <p>Formulario y tabla en Angular.</p>
+    </div>
+    <div>
+      <h2>Controlador</h2>
+      <p>EnvioController recibe las fechas y devuelve el calculo.</p>
+    </div>
+  </section>
+</main>
