@@ -82,11 +82,11 @@ http://localhost:4200
 
 ## Links para entrega
 
-Repositorio GitHub: colocar aqui el link del repositorio publico.
+Repositorio GitHub: https://github.com/Andrech24/Mini_core
 
-Video explicativo: colocar aqui el link de Loom o YouTube.
+Video explicativo: https://www.youtube.com/watch?v=F05Xc3aq_Mc
 
-Proyecto deployado: colocar aqui el link del deploy.
+Proyecto deployado: https://minicore-envios-frontend-udla.onrender.com/
 
 ## Documentacion oficial
 
