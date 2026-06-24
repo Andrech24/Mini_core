@@ -92,5 +92,9 @@ Proyecto deployado: colocar aqui el link del deploy.
 
 - Spring Boot: https://spring.io/projects/spring-boot
 - Angular: https://angular.dev/
+## Videos de referencia
+
+- Spring Boot REST API: https://www.youtube.com/results?search_query=spring+boot+rest+api+tutorial
+- Angular HTTP Client: https://www.youtube.com/results?search_query=angular+httpclient+tutorial
 
 
